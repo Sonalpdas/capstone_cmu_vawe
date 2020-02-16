@@ -1,0 +1,8 @@
+<div class="jumbotron">
+  <h1>Get your access token</h1>
+  {{#if user}}
+    <p>Welcome {{user}}!</p>
+  {{else}}
+    <a class="btn btn-primary btn-large" href="{{signInUrl}}">Click here to get access token</a>
+  {{/if}}
+</div>
