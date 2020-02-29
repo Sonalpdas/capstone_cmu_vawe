@@ -16,6 +16,7 @@ https://outlook-connect.herokuapp.com/**
 The business logic application which interacts with outlook APIs. 
 
 **POC Video**
+
 [![Sending Email through Outlook Account via Alexa](https://i.ibb.co/Lr4Sff4/Image.jpg)](https://streamable.com/tc47u "Sending Email through Outlook Account via Alexa")
 
 #
