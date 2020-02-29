@@ -20,8 +20,7 @@ Integrate Outlook based services with a device-based voice assistant - Alexa to 
 # Business Logic Application
 **https://outlook-connect.herokuapp.com/**
 
-**POC Video**
-
+# POC Video
 [![Sending Email through Outlook Account via Alexa](https://i.ibb.co/Lr4Sff4/Image.jpg)](https://streamable.com/tc47u "Sending Email through Outlook Account via Alexa")
 
 #
