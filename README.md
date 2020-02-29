@@ -11,14 +11,14 @@ Integrate Outlook based services with a device-based voice assistant - Alexa to 
 # Architecture
 ![](https://i.ibb.co/B4d9zhm/image.png)
 
-# Business Logic Application
-**https://outlook-connect.herokuapp.com/**
-
 # Use Cases
 ![](https://i.ibb.co/qstNnGf/use-cases.png)
 
 # Technology Stack
 ![](https://i.ibb.co/HtKgwT0/image.png)
+
+# Business Logic Application
+**https://outlook-connect.herokuapp.com/**
 
 **POC Video**
 
