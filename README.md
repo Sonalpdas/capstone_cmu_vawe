@@ -20,7 +20,7 @@ The business logic application which interacts with outlook APIs.
 [![Sending Email through Outlook Account via Alexa](https://i.ibb.co/Lr4Sff4/Image.jpg)](https://streamable.com/tc47u "Sending Email through Outlook Account via Alexa")
 
 #
-**Disclaimer: This is part of the capstone project done at Carnegie Mellon University for the completion of the degree - Masters of Information Systems Management. Any replication of this code in any kind and presented back to CMU would be considered an academic integrity violation.
+**Disclaimer: This is part of the capstone project done at Carnegie Mellon University for the completion of the degree - Masters of Information Systems Management. Any replication of this code in any kind and presented back to CMU would be considered an academic integrity violation.**
 
 **Contributors:**
 - Aarush Gupta
