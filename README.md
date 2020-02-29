@@ -18,6 +18,9 @@ The business logic application which interacts with outlook APIs.
 # Use Cases
 ![](https://i.ibb.co/qstNnGf/use-cases.png)
 
+# Technology Stack
+![](https://i.ibb.co/HtKgwT0/image.png)
+
 **POC Video**
 
 [![Sending Email through Outlook Account via Alexa](https://i.ibb.co/Lr4Sff4/Image.jpg)](https://streamable.com/tc47u "Sending Email through Outlook Account via Alexa")
