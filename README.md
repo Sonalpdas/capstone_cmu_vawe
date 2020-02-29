@@ -13,7 +13,6 @@ Integrate Outlook based services with a device-based voice assistant - Alexa to 
 
 # Business Logic Application
 **https://outlook-connect.herokuapp.com/**
-**The business logic application which interacts with outlook APIs.**
 
 # Use Cases
 ![](https://i.ibb.co/qstNnGf/use-cases.png)
