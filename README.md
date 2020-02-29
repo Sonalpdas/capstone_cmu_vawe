@@ -11,9 +11,12 @@ Integrate Outlook based services with a device-based voice assistant - Alexa to 
 # Architecture
 ![](https://i.ibb.co/B4d9zhm/image.png)
 
-# Website
+# Business Logic Application
 https://outlook-connect.herokuapp.com/**
 The business logic application which interacts with outlook APIs. 
+
+**POC Video**
+[![Sending Email through Outlook Account via Alexa](https://res.cloudinary.com/marcomontalbano/image/upload/v1582999118/video_to_markdown/images/vimeo--394657757-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/394657757 "Sending Email through Outlook Account via Alexa")
 
 #
 **Disclaimer: This is part of the capstone project done at Carnegie Mellon University for the completion of the degree - Masters of Information Systems Management. Any replication of this code in any kind and presented back to CMU would be considered an academic integrity violation.**
