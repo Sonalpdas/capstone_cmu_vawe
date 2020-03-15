@@ -8,6 +8,7 @@ require('dotenv').config();
 
 var authorize = require('./routes/authorize');
 var sendMail = require('./routes/sendMail');
+var sendInvite = require('./routes/sendInvite');
 
 var indexRouter = require('./routes/index');
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/authorize', authorize);
 app.use('/send-mail', sendMail);
+app.use('/create-event', sendInvite);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

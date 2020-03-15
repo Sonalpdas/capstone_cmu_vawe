@@ -1,16 +1,9 @@
-/**
- * http-server -a localhost -p 8081
- * @type {createApplication}
- */
-
 var express = require('express');
 var router = express.Router();
 var MicrosoftGraph = require('@microsoft/microsoft-graph-client');
 require('isomorphic-fetch');
 
-/* GET /authorize. */
 router.post('/', async function (req, res, next) {
-    // Get auth code
     let token;
     const tokenAvailable = req.headers.authorization ||
         req.headers['x-access-token'];
@@ -32,34 +25,48 @@ router.post('/', async function (req, res, next) {
 
         const subject = req.body.subject;
         const messageBody = req.body.messageBody;
+        const startTime = req.body.startTime;
+        const endTime = req.body.endTime;
+        const location = req.body.location;
         const receiverEmail = req.body.receiverEmail;
+        const name = req.body.name;
 
         const messageRequest = {
-            message: {
-                subject,
-                body: {
-                    contentType: "Text",
-                    content: messageBody
-                },
-                toRecipients: [
-                    {
-                        emailAddress: {
-                            address: receiverEmail
-                        }
-                    }
-                ]
+            subject,
+            body: {
+                contentType: "HTML",
+                content: messageBody
             },
-            saveToSentItems: "true"
+            start: {
+                dateTime: startTime,
+                timeZone: "Pacific Standard Time"
+            },
+            end: {
+                dateTime: endTime,
+                timeZone: "Pacific Standard Time"
+            },
+            location: {
+                displayName: location
+            },
+            attendees: [
+                {
+                    emailAddress: {
+                        address: receiverEmail,
+                        name: name
+                    },
+                    type: "required"
+                }
+            ]
         };
 
         // console.log(messageRequest, '====>')
         try {
-            // Send Mail
+            // Send Event Invite
             let response = await client
-                .api('/me/sendMail')
+                .api('/me/calendar/events')
                 .post(messageRequest)
             res.send({
-                message: 'Email sent successfully!',
+                message: 'Event created successfully!',
                 response
             })
         } catch (error) {
