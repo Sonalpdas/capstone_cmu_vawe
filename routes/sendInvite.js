@@ -28,8 +28,13 @@ router.post('/', async function (req, res, next) {
         const startTime = req.body.startTime;
         const endTime = req.body.endTime;
         const location = req.body.location;
-        const receiverEmail = req.body.receiverEmail;
-        const name = req.body.name;
+        const emails = req.body.receiverEmails;
+        const attendees = [];
+        for (let key in emails) {
+            const attendee = {emailAddress: {address: null}, type: "required"};
+            attendee.emailAddress.address = emails[key];
+            attendees.push(attendee);
+        }
 
         const messageRequest = {
             subject,
@@ -39,24 +44,16 @@ router.post('/', async function (req, res, next) {
             },
             start: {
                 dateTime: startTime,
-                timeZone: "Pacific Standard Time"
+                timeZone: "Eastern Standard Time"
             },
             end: {
                 dateTime: endTime,
-                timeZone: "Pacific Standard Time"
+                timeZone: "Eastern Standard Time"
             },
             location: {
                 displayName: location
             },
-            attendees: [
-                {
-                    emailAddress: {
-                        address: receiverEmail,
-                        name: name
-                    },
-                    type: "required"
-                }
-            ]
+            attendees
         };
 
         // console.log(messageRequest, '====>')
