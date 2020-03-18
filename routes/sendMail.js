@@ -33,9 +33,6 @@ router.post('/', async function (req, res, next) {
         const subject = req.body.subject;
         const messageBody = req.body.messageBody;
         const receiverEmailArray = req.body.receiverEmail;
-        //here we assume json request pass an array of string: "receiverEmail": ["mia@gmail.com", "sonal@gmail.com"]
-        //Assume pre-processing is done in alexa.
-        //Email de-duplication needed?
 
         try {
             for (const receiverEmail of receiverEmailArray) {
