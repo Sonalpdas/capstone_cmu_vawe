@@ -8,7 +8,7 @@ var router = express.Router();
 var MicrosoftGraph = require('@microsoft/microsoft-graph-client');
 require('isomorphic-fetch');
 
-const TEMPLATES = {'thank': ['Thank you for ', '!'], 'sorry': ['Sorry for ', '!']};
+const TEMPLATES = {'thanks': ['Thank you for ', '!'], 'sorry': ['Sorry for ', '!']};
 
 /* GET /authorize. */
 router.post('/', async function (req, res, next) {
