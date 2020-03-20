@@ -8,6 +8,8 @@ var router = express.Router();
 var MicrosoftGraph = require('@microsoft/microsoft-graph-client');
 require('isomorphic-fetch');
 
+const TEMPLATES = {'thank': ['Thank you for ', '!'], 'sorry': ['Sorry for ', '!']};
+
 /* GET /authorize. */
 router.post('/', async function (req, res, next) {
     // Get auth code
@@ -31,8 +33,13 @@ router.post('/', async function (req, res, next) {
         });
 
         const subject = req.body.subject;
-        const messageBody = req.body.messageBody;
+        var messageBody = req.body.messageBody;
         const receiverEmailArray = req.body.receiverEmail;
+
+        const template = req.body.template;
+        if (template != null) {
+            messageBody = TEMPLATES[template][0] + messageBody + TEMPLATES[template][1];
+        }
 
         try {
             for (const receiverEmail of receiverEmailArray) {
