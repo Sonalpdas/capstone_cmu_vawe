@@ -1,5 +1,6 @@
 /**
  * http-server -a localhost -p 8081
+ * git push heroku master -f
  * @type {createApplication}
  */
 
